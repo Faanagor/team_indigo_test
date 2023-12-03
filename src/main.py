@@ -1,4 +1,4 @@
-from data_capture import DataCapture
+from indigo_app.data_capture import DataCapture
 
 
 def main():

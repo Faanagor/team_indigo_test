@@ -1,4 +1,4 @@
-from stats import Stats
+from indigo_app.stats import Stats
 
 
 class DataCapture:
