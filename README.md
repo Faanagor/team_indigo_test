@@ -6,11 +6,11 @@ This Python library provides a simple implementation of a data capture system (`
 
 A list of technologies used within the project:
 
-- [Python]: Version 3.11.5
+- [python]: Version 3.11.5
 
 * [pytest]: Version 7.4.3
 * [virtualenv]: Version 20.24.5
-* [Pylint]: Version 1234
+* [pylint]: Version 3.0.2
 
 ## Installation
 
