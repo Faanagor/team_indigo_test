@@ -25,6 +25,8 @@ class Stats:
         Returns:
             int: The count of elements less than the threshold.
         """
+        if num_less > self.max_value:
+            num_less = self.max_value + 1
         return self.dict_sorted_add_capture.get(num_less - 1, 0)
 
     def between(self, num_down_range: int, num_up_range: int) -> int:
@@ -38,6 +40,9 @@ class Stats:
         Returns:
             int: The count of elements within the specified range.
         """
+        if num_up_range > self.max_value:
+            num_up_range = self.max_value
+
         return (self.dict_sorted_add_capture.get(num_up_range, 0) -
                 self.dict_sorted_add_capture.get(num_down_range - 1, 0))
 
@@ -51,5 +56,7 @@ class Stats:
         Returns:
             int: The count of elements greater than the threshold.
         """
+        if num_greater > self.max_value:
+            return 0
         return (self.dict_sorted_add_capture.get(self.max_value, 0) -
                 self.dict_sorted_add_capture.get(num_greater, 0))
