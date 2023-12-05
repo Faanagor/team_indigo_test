@@ -23,7 +23,7 @@ cd team_indigo_test
 
 It's recommended to use a virtual environment to manage your project dependencies. You can create one using `virtualenv`:
 
-`````bash
+```bash
 # Install virtualenv if you haven't already
 pip install virtualenv
 
@@ -36,13 +36,19 @@ venv\Scripts\activate
 # On macOS/Linux
 source venv/bin/activate
 ```
+
 ### Install Requirements
+
 Once the virtual environment is activated, install the project requirements:
-````bash
+
+```bash
 pip install -r requirements.txt
 ```
+
 ### Run Project
+
 Once the requirements.txt has been installed, you need to go to the team_indigo_test directory, again, and go into the src directory. Later, you run main.py module:
+
 ```bash
 cd team_indigo_test
 cd src
@@ -59,13 +65,9 @@ A list of technologies used within the project:
 * [virtualenv]: Version 20.24.5
 * [pylint]: Version 3.0.2
 
-```
-
 ## Features
 
 The project is composed by 2 main classes with a module test for each one:
 
 DataCapture: Class that adds elements to list_capture, calls to Stat Class and return its result
 Stats: Initialize an instance of Stats with a given data list.
-```
-`````
