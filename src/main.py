@@ -10,6 +10,7 @@ def main():
     capture.add(3)
     capture.add(4)
     capture.add(6)
+    # capture.add(2000)
 
     stats = capture.build_stats()
     # should return 2 (only two values 3, 3 are less than 4)
