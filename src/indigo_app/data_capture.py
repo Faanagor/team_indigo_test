@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 from .stats import Stats
 
 

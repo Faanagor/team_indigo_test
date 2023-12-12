@@ -8,12 +8,31 @@ class Stats:
         """Initialize an instance of Stats with a given data list.
 
         Args:
-            dict_capture (Dict): The list of data for which statistics will be
-            calculated.
-            dict_sorted_add_capture (Dict):
+            max_value (int): The maximum value in the data.
+            dict_sorted_add_capture (Dict): Dictionary with sorted cumulative counts.
         """
+        self.max_limit = 1000
+        self._validate_input(max_value, dict_sorted_add_capture)
         self.max_value = max_value
         self.dict_sorted_add_capture = dict_sorted_add_capture
+
+    def _validate_input(self, max_value: int, dict_sorted_add_capture: Dict) -> None:
+        """Validate the input parameters for the Stats class.
+
+        Args:
+            max_value (int): The maximum value in the data.
+            dict_sorted_add_capture (Dict): Dictionary with sorted cumulative counts.
+
+        Raises:
+            TypeError: If max_value is not an integer or dict_sorted_add_capture is not a dictionary.
+        """
+        if not isinstance(max_value, int):
+            raise TypeError("max_value must be an integer.")
+        if not isinstance(dict_sorted_add_capture, dict):
+            raise TypeError("dict_sorted_add_capture must be a dictionary.")
+        if max_value > self.max_limit:
+            raise ValueError(
+                f"Input must be an integer less than or equal to {self.max_limit}.")
 
     def less(self, num_less: int) -> int:
         """
